@@ -1,15 +1,18 @@
 import { useState } from 'react'
 
 import './App.css'
+import SignUp from './components/SignUp'
+import Header from './components/Layouts/Header'
+import Body from './components/Body'
+import { Provider } from 'react-redux'
+import store from './appstore/store'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1 className="">Aslam</h1>
-    </>
-  )
+    <Provider store={store}>
+      <Body />
+    </Provider>
+  );
 }
 
 export default App
